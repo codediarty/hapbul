@@ -1,0 +1,2 @@
+/*! 합불 공통 */
+!function(){var e=document.getElementById("navToggle"),t=document.getElementById("nav");e&&t&&(e.addEventListener("click",function(){var n=t.classList.toggle("is-open");e.setAttribute("aria-expanded",n?"true":"false")}),t.addEventListener("click",function(n){"A"===n.target.tagName&&(t.classList.remove("is-open"),e.setAttribute("aria-expanded","false"))}))}();
