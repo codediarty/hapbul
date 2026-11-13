@@ -1439,6 +1439,10 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .ord-done > p { margin-top: 8px; }
 .ord-done .ord-sum { text-align: left; }
 .ord-done .hint { margin-top: 14px; }
+.ord-done.is-wait .ord-ok { background: #F59E0B; box-shadow: 0 0 0 8px rgba(245, 158, 11, 0.14); }
+.ord-done.is-wait .ord-ok svg { display: none; }
+.ord-done.is-wait .ord-ok::after { content: ""; width: 12px; height: 12px; border-radius: 50%; border: 2.5px solid #fff; border-right-color: transparent; animation: ordSpin 1s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .ord-done.is-wait .ord-ok::after { animation: none; } }
 .ord-next { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 18px; margin-top: 20px; }
 .ord-side { padding: 22px; border-radius: 16px; background: var(--surface); font-size: 14px; }
 .ord-side h2 { font-size: 16px; }
@@ -1458,3 +1462,5 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
   .ord-two { grid-template-columns: 1fr; }
   .ord-sum div { font-size: 14px; }
 }
+
+@keyframes ordSpin { to { transform: rotate(360deg); } }
