@@ -25,7 +25,6 @@
 - [무료 합불 판정](https://hapbul.kr/): 서류를 올려 판정받는 첫 화면
 - [판정 기준](https://hapbul.kr/criteria/): 심사 영역, 배점, 합격 기준 점수, 근거 조사 출처, 한계
 - [서비스 안내](https://hapbul.kr/service/): 합불 합격예측, 합불 첨삭, 합불 사업계획서 합격예측, 합불 사업계획서 첨삭
-- [합불 합격예측 예시](https://hapbul.kr/service/sample/): 가상 문서로 만든 합격예측 전체
 - [자주 묻는 질문](https://hapbul.kr/faq/)
 
 ## 서류별 안내

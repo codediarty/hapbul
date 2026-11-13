@@ -141,7 +141,8 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .hero-h { margin-top: 18px; font-size: clamp(36px, 4.4vw, 56px); line-height: 1.16; letter-spacing: -0.045em; font-weight: 800; }
 .hero-h .hl { position: relative; white-space: nowrap; }
 .hero-h .hl::after { content: ''; position: absolute; left: -2px; right: -2px; bottom: 0.06em; height: 0.3em; background: rgba(240, 40, 60, 0.18); z-index: -1; border-radius: 3px; }
-.hero-lead { margin-top: 22px; max-width: 700px; font-size: 19px; line-height: 1.7; color: var(--text); }
+.hero-sub { margin-top: 14px; font-size: clamp(21px, 2.1vw, 27px); line-height: 1.35; font-weight: 700; letter-spacing: -0.03em; color: var(--ink); }
+.hero-lead { margin-top: 14px; max-width: 700px; font-size: 19px; line-height: 1.7; color: var(--text); }
 .hero-lead b { color: var(--ink); }
 .hero-src { margin-top: 10px; font-size: 13.5px; color: var(--muted); }
 .hero-src a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
@@ -669,6 +670,9 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .rep-pages figure:nth-child(2) { left: 19%; top: 0; z-index: 2; }
 .rep-pages figure:nth-child(3) { right: 0; top: 70px; z-index: 3; }
 .rep-pages img { width: 100%; height: auto; }
+.rep-pages figure:nth-child(2)::after, .rep-pages figure:nth-child(3)::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 58%; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.72) 38%); }
+.rep-lock { position: absolute; z-index: 4; right: 5%; bottom: 12%; display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 14.5px; font-weight: 700; box-shadow: 0 14px 30px -12px rgba(14, 22, 48, 0.55); }
+.rep-lock svg { width: 16px; height: 16px; flex: none; }
 
 /* ---------------- 상품 ---------------- */
 .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 980px; margin: 0 auto; }
@@ -946,8 +950,25 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .offer-price b { font-size: 30px; font-weight: 800; letter-spacing: -0.03em; color: #fff; }
 .offer-card.is-main .offer-price b { color: var(--ink); }
 .offer-note { margin-top: 14px; font-size: 13px; line-height: 1.6; color: #8D98B6; }
-.offer-sample { margin-top: 10px; font-size: 14px; color: #8D98B6; }
-.offer-sample a { color: #fff; font-weight: 700; margin-right: 6px; }
+.offer-safe { margin-top: 16px; font-size: 14.5px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
+.offer-safe::before { content: ''; flex: none; width: 18px; height: 18px; border-radius: 50%; background: rgba(255,255,255,0.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M4 7.2l2 2 4-4.4' fill='none' stroke='%23FFFFFF' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
+.offer-safe + .offer-note { margin-top: 8px; }
+/* 휴대폰 결과 화면 아래 고정 결제 막대 */
+.buybar { display: none; }
+@media (max-width: 760px) {
+  .buybar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; align-items: center; gap: 12px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,0.97); border-top: 1px solid var(--line); box-shadow: 0 -10px 30px -12px rgba(14,22,48,0.25); transition: transform .25s ease; }
+  .buybar[hidden] { display: none; }
+  .buybar.is-off { transform: translateY(110%); }
+  .buybar .bb-t { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.3; }
+  .buybar .bb-t b { font-size: 14px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .buybar .bb-t span { font-size: 13px; font-weight: 700; color: var(--ink); }
+  .buybar .bb-t s { color: #98A2B3; font-weight: 500; margin-right: 2px; }
+  .buybar .btn { flex: none; padding: 12px 16px; font-size: 15px; }
+  body.is-room main, body.is-room .site-foot { padding-bottom: 72px; }
+}
+@media (prefers-reduced-motion: reduce) { .buybar { transition: none; } }
+/* 결제하면 받는 것: 쪽 미리보기는 일부만 보이고 나머지는 잠근다 */
+.rep-hint { margin-top: 12px; font-size: 14px; color: var(--muted); }
 .fine { font-size: 12.5px; line-height: 1.7; color: var(--muted); }
 .room-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 8px; }
 
@@ -1090,6 +1111,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
   .sec-head p, .hero-lead, .why-copy p, .rep-lead { font-size: 16.5px; }
   .hero { padding: 40px 0 28px; }
   .hero-h { font-size: clamp(31px, 8.6vw, 40px); }
+  .hero-sub { font-size: 20px; margin-top: 10px; }
   .hero-h .hl { white-space: normal; }
   .steps { gap: 8px; font-size: 13px; margin-top: 28px; }
   .steps li + li::before { width: 12px; }
