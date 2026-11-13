@@ -1362,3 +1362,37 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .dv-cta .btn { gap: 8px; }
 .dv-cta span { font-size: 13.5px; color: #B9C3DA; }
 @media (max-width: 760px) { .dv-cta .btn { width: 100%; white-space: normal; height: auto; min-height: 52px; padding-top: 12px; padding-bottom: 12px; line-height: 1.35; } }
+/* 합격까지 몇 단계 */
+.path .card-h h3 b { color: var(--blue-600); }
+.path-chart { position: relative; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 14px; align-items: end; height: 196px; margin-top: 10px; padding: 0 4px; border-bottom: 1px solid var(--line); }
+.pc-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+.pc-col b { margin-bottom: 6px; font-size: 17px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); }
+.pc-col i { display: block; width: 100%; max-width: 64px; height: calc(var(--v) * 1.6px); border-radius: 8px 8px 2px 2px; background: #C9D3E8; }
+.pc-col.is-now b { color: var(--red-600); }
+.pc-col.is-now i { background: var(--red-600); }
+.pc-col.is-reach b { color: var(--blue-600); }
+.pc-col.is-reach i { background: var(--blue); }
+.pc-col.is-after i { background: #9DB3F0; }
+.pc-line { position: absolute; left: 0; right: 0; bottom: calc(var(--line) * 1.6px); border-top: 2px dashed rgba(20, 73, 230, 0.5); pointer-events: none; }
+.pc-line span { position: absolute; left: 0; top: -24px; padding: 0 4px; background: #fff; font-size: 12px; font-weight: 700; color: var(--blue-600); }
+.path-labels { display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 14px; margin-top: 8px; padding: 0 4px; text-align: center; font-size: 12.5px; font-weight: 700; color: var(--muted); }
+.path-labels em { display: block; max-width: 100%; margin: 4px auto 0; font-style: normal; font-weight: 600; color: var(--text); }
+.dv-cta .btn em { margin-left: 6px; padding: 2px 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.18); font-style: normal; font-size: 0.9em; }
+/* 결제 뒤 진행 순서 */
+.offer-flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: of; }
+.offer-flow li { position: relative; padding: 12px 14px 12px 44px; border-radius: 12px; background: rgba(255, 255, 255, 0.06); counter-increment: of; }
+.offer-flow li::before { content: counter(of); position: absolute; left: 14px; top: 12px; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 12px; font-weight: 800; }
+.offer-flow b { display: block; font-size: 14px; color: #fff; }
+.offer-flow span { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.5; color: #AEB8D0; }
+@media (max-width: 760px) {
+  .offer-flow { grid-template-columns: 1fr; }
+  .path-chart, .path-labels { gap: 6px; }
+  .pc-col b { font-size: 14px; }
+  .path-labels { font-size: 11px; }
+}
+.dv-cta .btn em { white-space: nowrap; }
+@media (max-width: 440px) { .dv-cta .btn em { display: none; } }
+@media (max-width: 760px) {
+  .judges-mini { flex-wrap: wrap; gap: 4px 10px; }
+  .judges-mini span { white-space: nowrap; }
+}
