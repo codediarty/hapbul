@@ -837,6 +837,31 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .viz-meters .t-pass .m-val em { color: var(--blue-600); }
 .viz-meters .m-cnt { display: none; }
 .lost-h { margin: 22px 0 8px; font-size: 14px; font-weight: 800; color: var(--ink); }
+/* 결제 전에는 가리는 결과: 영역 점수, 감점이 큰 영역, 불합격 필터링 문장 */
+.card-h small.lk, .kpi .kpi-lk { display: inline-flex; align-items: center; gap: 5px; }
+.card-h small.lk svg, .kpi .kpi-lk svg { flex: none; color: var(--red-600); }
+.kpi .kpi-lk { color: var(--text); font-weight: 600; }
+.radar-mz { position: relative; max-width: 520px; margin: 0 auto; }
+.radar-mz svg { display: block; width: 100%; height: auto; filter: blur(9px); opacity: .7; }
+.radar-mz.is-mz svg { display: none; }
+.radar-mz .mz-svg { display: block; image-rendering: pixelated; image-rendering: crisp-edges; }
+.mzbar { display: block; height: 10px; border-radius: 3px; background: linear-gradient(90deg, #C9D1DF 0 14%, #B6C0D3 14% 27%, #D8DEE8 27% 36%, #BFC8D9 36% 52%, #DCE1EA 52% 61%, #C3CBDB 61% 77%, #D4DAE5 77% 88%, #BCC5D6 88% 100%); }
+.mzbar.v1 { background: linear-gradient(90deg, #BCC5D6 0 9%, #D4DAE5 9% 22%, #C3CBDB 22% 38%, #DCE1EA 38% 45%, #B6C0D3 45% 63%, #CFD6E2 63% 74%, #C9D1DF 74% 91%, #D8DEE8 91% 100%); }
+.mzbar.v2 { background: linear-gradient(90deg, #D4DAE5 0 18%, #BFC8D9 18% 26%, #DCE1EA 26% 41%, #C3CBDB 41% 49%, #B6C0D3 49% 66%, #D8DEE8 66% 79%, #C9D1DF 79% 86%, #BCC5D6 86% 100%); }
+.viz-meters.is-locked .m-val .mz { font-size: 15px; font-weight: 800; color: var(--ink); }
+.viz-lost.is-locked .l-name .mz { color: var(--text); }
+.viz-lost.is-locked .l-val .mz { margin-left: auto; color: var(--ink); }
+.viz-lost.is-locked .l-bar.mzbar { height: 10px; }
+.lock-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 18px; padding: 12px 14px; border-radius: 12px; background: var(--red-50); font-size: 14px; color: var(--ink); }
+.lock-row svg { flex: none; color: var(--red-600); }
+.lock-row span { flex: 1 1 200px; }
+.flt-lead { margin: -6px 0 14px; font-size: 14.5px; line-height: 1.65; color: var(--text); }
+.viz-legend.is-veil li .mz { display: inline-block; min-width: 72px; vertical-align: middle; }
+
+@media (max-width: 760px) {
+  .lock-row .btn { width: 100%; }
+}
+
 .viz-lost li { display: grid; grid-template-columns: 128px minmax(0, 1fr) 70px; align-items: center; gap: 12px; padding: 6px 0; font-size: 14px; }
 .viz-lost .l-name { color: var(--text); }
 .viz-lost .l-bar { position: relative; height: 10px; }
@@ -1319,3 +1344,21 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
   .kinds p { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) { .pb-prices { grid-template-columns: 1fr; } }
+
+/* 불합격 필터링 문장: 문서를 흐리게 가리고 걸린 문장의 자리만 남긴다 (문서 표시 규칙보다 뒤에 둔다) */
+.doc-box.is-veil { position: relative; background: #FBFCFE; }
+.viz-doc.is-veil { position: relative; color: transparent; text-shadow: 0 0 8px rgba(52, 64, 84, 0.75); user-select: none; -webkit-user-select: none; }
+.viz-doc.is-veil .d-title { color: transparent; text-shadow: 0 0 8px rgba(14, 22, 48, 0.85); }
+.viz-doc.is-veil .d-m, .viz-doc.is-veil .d-m.s1, .viz-doc.is-veil .d-m.s2, .viz-doc.is-veil .d-m.s3 { color: transparent; font-weight: inherit; box-shadow: none; }
+.viz-doc.is-veil .d-m.s1 { text-shadow: 0 0 8px rgba(168, 90, 0, 0.85); }
+.viz-doc.is-veil .d-m.s2 { text-shadow: 0 0 8px rgba(179, 15, 36, 0.85); }
+.viz-doc.is-veil .d-m.s3 { background: transparent; text-shadow: 0 0 8px rgba(168, 0, 26, 0.9); padding: 0; }
+.viz-doc.is-veil::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(251, 252, 254, 0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(251, 252, 254, 0.6) 1px, transparent 1px); background-size: 7px 7px; }
+.viz-doc.is-veil .d-tag { position: relative; z-index: 1; color: #fff; text-shadow: none; }
+.viz-doc.is-veil .d-tag.s1 { color: #3D2400; }
+.radar-mz .rz-badge { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: 6px; padding: 9px 14px; border-radius: 999px; background: rgba(14, 22, 48, 0.88); color: #fff; font-size: 13.5px; font-weight: 700; white-space: nowrap; box-shadow: var(--shadow); }
+.radar-mz .rz-badge svg { color: #FF8A98; }
+.dv-cta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+.dv-cta .btn { gap: 8px; }
+.dv-cta span { font-size: 13.5px; color: #B9C3DA; }
+@media (max-width: 760px) { .dv-cta .btn { width: 100%; white-space: normal; height: auto; min-height: 52px; padding-top: 12px; padding-bottom: 12px; line-height: 1.35; } }
