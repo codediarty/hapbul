@@ -653,6 +653,8 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .judge dt { font-size: 12.5px; font-weight: 700; color: var(--muted); }
 .judge dd { margin: 2px 0 0; color: var(--text); line-height: 1.6; }
 .judge blockquote { margin-top: 14px; padding: 14px 16px; border-left: 3px solid var(--line); background: #fff; font-size: 14.5px; line-height: 1.7; color: var(--text); }
+.judge blockquote b { display: block; font-weight: 700; color: var(--ink); line-height: 1.55; }
+.judge blockquote span { display: block; margin-top: 8px; font-size: 13.5px; line-height: 1.65; color: var(--muted); }
 .judge.v-fail blockquote { border-left-color: var(--red); }
 .judge.v-hold blockquote { border-left-color: var(--amber); }
 .judge.v-pass blockquote { border-left-color: var(--blue); }
@@ -844,7 +846,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .radar-mz { position: relative; max-width: 520px; margin: 0 auto; }
 .radar-mz svg { display: block; width: 100%; height: auto; filter: blur(9px); opacity: .7; }
 .radar-mz.is-mz svg { display: none; }
-.radar-mz .mz-svg { display: block; image-rendering: pixelated; image-rendering: crisp-edges; }
+.radar-mz .mz-svg { display: block; width: 100% !important; max-width: 100%; height: auto !important; image-rendering: pixelated; image-rendering: crisp-edges; }
 .mzbar { display: block; height: 10px; border-radius: 3px; background: linear-gradient(90deg, #C9D1DF 0 14%, #B6C0D3 14% 27%, #D8DEE8 27% 36%, #BFC8D9 36% 52%, #DCE1EA 52% 61%, #C3CBDB 61% 77%, #D4DAE5 77% 88%, #BCC5D6 88% 100%); }
 .mzbar.v1 { background: linear-gradient(90deg, #BCC5D6 0 9%, #D4DAE5 9% 22%, #C3CBDB 22% 38%, #DCE1EA 38% 45%, #B6C0D3 45% 63%, #CFD6E2 63% 74%, #C9D1DF 74% 91%, #D8DEE8 91% 100%); }
 .mzbar.v2 { background: linear-gradient(90deg, #D4DAE5 0 18%, #BFC8D9 18% 26%, #DCE1EA 26% 41%, #C3CBDB 41% 49%, #B6C0D3 49% 66%, #D8DEE8 66% 79%, #C9D1DF 79% 86%, #BCC5D6 86% 100%); }
@@ -967,6 +969,10 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
 .offer-card { display: flex; flex-direction: column; padding: 22px; border-radius: 16px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); }
 .offer-card.is-main { background: #fff; color: var(--text); border-color: #fff; }
+.offer-sample { display: block; margin-top: 10px; text-align: center; font-size: 13.5px; font-weight: 600; color: var(--blue-600); text-decoration: underline; text-underline-offset: 3px; }
+.offer-sample:hover { color: var(--blue); }
+.plan-sample { display: block; margin-top: 10px; text-align: center; font-size: 13.5px; font-weight: 600; color: var(--blue-600); text-decoration: underline; text-underline-offset: 3px; }
+.hint .plan-sample { display: inline; margin: 0 0 0 4px; }
 .offer-card h4 { font-size: 19px; color: #fff; }
 .offer-card.is-main h4 { color: var(--ink); }
 .offer-card ul { margin-top: 12px; flex: 1; }
