@@ -1564,3 +1564,6 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .prose ul.checklist li::before { content: ''; position: absolute; left: 0; top: 13px; width: 18px; height: 18px; border-radius: 5px; border: 1.5px solid #B8C6E6; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.8 10.3l2.7 2.7 5.7-5.9' fill='none' stroke='%231F5EFF' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 13px no-repeat; }
 .hub-faq { margin-top: 56px; }
 .hub-faq .h2 { margin-bottom: 20px; }
+/* 핵심 요약의 짧은 답: 이 문단만 떼어 읽어도 질문에 답이 되게 */
+.keybox .answer { margin-top: 10px; font-size: 16.5px; line-height: 1.7; font-weight: 600; color: var(--ink); }
+.keybox .answer + ul { margin-top: 14px; padding-top: 12px; border-top: 1px solid #CFDCFF; }
