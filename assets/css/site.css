@@ -1487,7 +1487,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .prose ol.qs li span { display: block; margin-top: 6px; font-size: 14.5px; line-height: 1.7; color: var(--muted); }
 .hub-more { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 28px; font-size: 15px; }
 .hub-more a { font-weight: 600; }
-.by-grid { display: grid; grid-template-columns: 1.2fr 1.2fr 1fr; gap: 20px; }
+.by-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .by-grid > div { padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
 .by-grid h3 { font-size: 19px; }
 .by-grid h3 a { color: var(--ink); }
@@ -1550,3 +1550,17 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .dv-share-btn:hover { background: rgba(255, 255, 255, 0.12); color: #fff; }
 .dv-share-note { font-size: 13px; color: #B9C3DA; }
 .room-foot .dv-share-note { color: var(--muted); }
+
+/* 문항별 자소서: 쓰는 순서와 체크리스트 */
+.prose ol.howto { padding-left: 0; list-style: none; counter-reset: hw; }
+.prose ol.howto li { position: relative; padding: 14px 16px 14px 54px; border: 1px solid var(--line); border-radius: 14px; background: #fff; counter-increment: hw; }
+.prose ol.howto li + li { margin-top: 10px; }
+.prose ol.howto li::before { content: counter(hw); position: absolute; left: 16px; top: 14px; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 12.5px; font-weight: 800; }
+.prose ol.howto li b { display: block; color: var(--ink); line-height: 1.55; }
+.prose ol.howto li span { display: block; margin-top: 4px; font-size: 14.5px; line-height: 1.7; color: var(--muted); }
+.prose ul.checklist { padding-left: 0; list-style: none; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 8px 18px; }
+.prose ul.checklist li { position: relative; padding: 10px 0 10px 30px; line-height: 1.6; }
+.prose ul.checklist li + li { border-top: 1px solid var(--line-2); }
+.prose ul.checklist li::before { content: ''; position: absolute; left: 0; top: 13px; width: 18px; height: 18px; border-radius: 5px; border: 1.5px solid #B8C6E6; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.8 10.3l2.7 2.7 5.7-5.9' fill='none' stroke='%231F5EFF' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 13px no-repeat; }
+.hub-faq { margin-top: 56px; }
+.hub-faq .h2 { margin-bottom: 20px; }
