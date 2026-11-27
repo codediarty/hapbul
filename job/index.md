@@ -30,7 +30,7 @@
 
 재무와 회계는 거래를 정확히 기록하고 결산과 분석으로 회사의 재무 상태를 관리하는 일입니다. 서류에서 "꼼꼼하다"는 말은 모든 지원자가 씁니다. 무엇을 어떤 방법으로 검증했고 오류나 마감 기간이 얼마나 줄었는지가 꼼꼼함의 증거입니다.](https://hapbul.kr/job/finance/)
 
-[기업별 자소서도 보기](https://hapbul.kr/company/)[문항별 자소서도 보기](https://hapbul.kr/question/)[자소서 글자수 세기](https://hapbul.kr/geuljasu/)[취업 서류 가이드](https://hapbul.kr/guide/)
+[기업별 자소서도 보기](https://hapbul.kr/company/)[문항별 자소서도 보기](https://hapbul.kr/question/)[자소서 글자수 세기](https://hapbul.kr/geuljasu/)[자소서 문항 분석기](https://hapbul.kr/munhang/)[취업 서류 가이드](https://hapbul.kr/guide/)
 
 ## 자주 묻는 질문
 

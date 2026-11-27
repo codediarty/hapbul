@@ -26,7 +26,7 @@
 
 인사담당자 조사에서 나쁜 인상을 주는 자기소개서 1위는 요점이 분명치 않은 글이었습니다. 소제목과 첫 문장에 문항의 답을 두면 짧은 시간에 읽혀도 요점이 남습니다.](https://hapbul.kr/question/title/)
 
-[기업별 자소서도 보기](https://hapbul.kr/company/)[직무별 자소서도 보기](https://hapbul.kr/job/)[자소서 글자수 세기](https://hapbul.kr/geuljasu/)[취업 서류 가이드](https://hapbul.kr/guide/)
+[기업별 자소서도 보기](https://hapbul.kr/company/)[직무별 자소서도 보기](https://hapbul.kr/job/)[자소서 글자수 세기](https://hapbul.kr/geuljasu/)[자소서 문항 분석기](https://hapbul.kr/munhang/)[취업 서류 가이드](https://hapbul.kr/guide/)
 
 ## 자주 묻는 질문
 

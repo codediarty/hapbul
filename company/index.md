@@ -34,7 +34,7 @@ CJ는 인재상 하고잡이를 "성과로 증명해 내는 사람"으로 정의
 
 KT는 2026년 대졸 신입 채용에서 AI를 실제 업무에 활용하는 역량을 주요 평가 요소로 반영하고, 지원자가 처한 상황, 맡은 역할, 시도한 과정과 결과를 종합적으로 본다고 밝혔습니다. 자기소개서 세 문항 모두 이 네 가지가 갖춰져야 합니다.](https://hapbul.kr/kt/)
 
-[직무별 자소서도 보기](https://hapbul.kr/job/)[문항별 자소서도 보기](https://hapbul.kr/question/)[자소서 글자수 세기](https://hapbul.kr/geuljasu/)[취업 서류 가이드](https://hapbul.kr/guide/)
+[직무별 자소서도 보기](https://hapbul.kr/job/)[문항별 자소서도 보기](https://hapbul.kr/question/)[자소서 글자수 세기](https://hapbul.kr/geuljasu/)[자소서 문항 분석기](https://hapbul.kr/munhang/)[취업 서류 가이드](https://hapbul.kr/guide/)
 
 ## 자주 묻는 질문
 

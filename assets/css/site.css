@@ -1580,3 +1580,34 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
   .prose table:not(.fixes) tbody th { white-space: normal; word-break: keep-all; }
   .prose table:not(.fixes) td, .prose table:not(.fixes) th { word-break: keep-all; overflow-wrap: anywhere; }
 }
+
+/* 2026.11.27 자소서 문항 분석기(/munhang/): 글자수 세기와 같은 상자 위에 문항 칸, 결과 카드, 답 칸 */
+.mh-label { display: block; margin-bottom: 8px; font-size: 15px; font-weight: 700; color: var(--ink); }
+.mh .cnt-in .mh-q { min-height: 110px; }
+.mh .cnt-in #mhA { min-height: 200px; }
+.mh-exh { margin-top: 14px; font-size: 13.5px; color: var(--muted); }
+.mh-ex { margin-top: 6px; }
+.mh-ex button:hover { border-color: var(--blue-600); color: var(--blue-700); }
+.mh-out { display: grid; gap: 14px; margin-top: 22px; scroll-margin-top: 90px; }
+.mh-out[hidden], .mh-ans[hidden] { display: none; }
+.mh-sum { padding: 14px 16px; border-radius: 12px; background: var(--blue-50); color: var(--blue-700); font-weight: 600; line-height: 1.65; }
+.mh-sum a, .mh-lim a { color: inherit; text-decoration: underline; }
+.mh-lim { padding: 12px 16px; border-radius: 12px; background: var(--surface); font-size: 14.5px; line-height: 1.6; }
+.mh-card { padding: 20px 22px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.mh-card .mh-type { display: inline-block; padding: 4px 10px; border-radius: 999px; background: var(--navy); color: #fff; font-size: 13px; font-weight: 700; }
+.mh-card h3 { margin: 16px 0 6px; font-size: 15px; font-weight: 700; color: var(--ink); }
+.mh-card p, .mh-card li { font-size: 15px; line-height: 1.7; }
+.mh-card ol, .mh-card ul { margin: 0; padding-left: 22px; }
+.mh-card ol { list-style: decimal; }
+.mh-card ul { list-style: disc; }
+.mh-card li::marker { color: var(--muted); font-weight: 600; }
+.mh-card li { margin: 3px 0; }
+.mh-card li b { margin-right: 4px; }
+.mh-fix { display: grid; gap: 8px; }
+.mh-fix p { padding: 10px 12px; border-radius: 10px; font-size: 14.5px; }
+.mh-fix span { display: block; margin-bottom: 2px; font-size: 12.5px; font-weight: 700; }
+.mh-fix .was { background: var(--red-50); color: var(--red-700); }
+.mh-fix .now { background: var(--blue-50); color: var(--blue-700); }
+.mh-more { margin-top: 14px; font-weight: 600; }
+.mh-ans { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line-2); }
+.mh-msg { align-self: center; font-size: 14px; color: var(--red-700); }
